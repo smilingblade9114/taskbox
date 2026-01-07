@@ -4,9 +4,9 @@ const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   staticDirs: ["../public"],
   addons: [
+    "@chromatic-com/storybook",
     "@storybook/addon-docs",
     "@storybook/addon-vitest",
-    "@chromatic-com/storybook"
   ],
   framework: {
     name: "@storybook/react-vite",
