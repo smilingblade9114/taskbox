@@ -33,6 +33,24 @@ export const Default: Story = {
     },
   },
   play: async ({ canvas, userEvent }) => {
-    // Waits for the component to transition from the loading state
     await waitForElementToBeRemoved(await canvas.findByTestId('loading'));
-    // Waits for the component to be updated based on the store
+    await waitFor(async () => {
+      await userEvent.click(canvas.getByLabelText('pinTask-1'));
+      await userEvent.click(canvas.getByLabelText('pinTask-3'));
+    });
+  },
+};
+
+export const Error: Story = {
+  parameters: {
+    msw: {
+      handlers: [
+        http.get('https://jsonplaceholder.typicode.com/todos?userId=1', () => {
+          return new HttpResponse(null, {
+            status: 403,
+          });
+        }),
+      ],
+    },
+  },
+};
