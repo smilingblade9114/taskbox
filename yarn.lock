@@ -991,6 +991,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-a11y@npm:^10.3.5":
+  version: 10.3.6
+  resolution: "@storybook/addon-a11y@npm:10.3.6"
+  dependencies:
+    "@storybook/global": "npm:^5.0.0"
+    axe-core: "npm:^4.2.0"
+  peerDependencies:
+    storybook: ^10.3.6
+  checksum: 10c0/ebe288e95e94aab592f95453434538a11af166de4a7951dfa1b6b696403819e78d55fd443ff01aff975486572da49a920fe4b56f71a659a708084beceb9f3476
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-docs@npm:^10.1.11":
   version: 10.3.5
   resolution: "@storybook/addon-docs@npm:10.3.5"
@@ -1745,6 +1757,13 @@ __metadata:
     estree-walker: "npm:^3.0.3"
     js-tokens: "npm:^10.0.0"
   checksum: 10c0/35e57b754ba63287358094d4f7ae8de2de27286fb4e76a1fbf28b2e67e3b670b59c3f511882473d0fd2cdbaa260062e3cd4f216b724c70032e2b09e5cebbd618
+  languageName: node
+  linkType: hard
+
+"axe-core@npm:^4.2.0":
+  version: 4.11.4
+  resolution: "axe-core@npm:4.11.4"
+  checksum: 10c0/c4aa83fc3eac5f7a0d0cb1a28f9d073acf0c06ce8daacc38608faa278c57ce084c028c850746b98817ae4c101c30c1a32e95ea34748c4b4c7419b9b81221ef84
   languageName: node
   linkType: hard
 
@@ -2714,6 +2733,7 @@ __metadata:
     "@chromatic-com/storybook": "npm:^4.1.3"
     "@eslint/js": "npm:^9.39.1"
     "@reduxjs/toolkit": "npm:^2.11.2"
+    "@storybook/addon-a11y": "npm:^10.3.5"
     "@storybook/addon-docs": "npm:^10.1.11"
     "@storybook/addon-vitest": "npm:^10.1.11"
     "@storybook/react-vite": "npm:^10.1.11"
