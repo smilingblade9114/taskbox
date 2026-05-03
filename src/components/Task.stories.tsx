@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { fn } from 'storybook/test';
+import { Provider } from 'react-redux';
+
+import store from '../lib/store';
 
 import Task from './Task';
-
-export const ActionsData = {
-  onArchiveTask: fn(),
-  onPinTask: fn(),
-};
 
 const meta = {
   component: Task,
   title: 'Task',
+  decorators: [
+    (story) => <Provider store={store}>{story()}</Provider>,
+  ],
   tags: ['autodocs'],
-  excludeStories: /.*Data$/,
-  args: {
-    ...ActionsData,
+  argTypes: {
+    onPinTask: { action: 'onPinTask' },
+    onArchiveTask: { action: 'onArchiveTask' },
   },
 } satisfies Meta<typeof Task>;
 
